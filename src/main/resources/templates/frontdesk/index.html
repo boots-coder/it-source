@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>boots-coderIT资源网</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.3.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!--引入头部-->
+    <header th:replace="~{/frontdesk/header::header}"></header>
+    <!-- banner start-->
+    <!-- IT Banner Section -->
+    <section id="banner">
+        <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel"
+             data-interval="4000">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="images/it_banner1.png" alt="广告位招租 1">
+                </div>
+                <div class="item">
+                    <img src="images/it_banner2.png" alt="广告位招租 2">
+                </div>
+                <div class="item">
+                    <img src="images/it_banner3.png" alt="广告位招租 3">
+                </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">上一张</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">下一张</span>
+            </a>
+        </div>
+    </section>
+    <!-- banner end-->
+    <!-- IT Resource Sections -->
+    <style>
+        .resources_list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .resources_list .header {
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .resources_list .item {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources_list .item img {
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .resources_list .badge {
+            font-size: 1.2em;
+            padding: 5px 10px;
+            border-radius: 50%;
+            background: #007bff;
+            color: white;
+            margin-right: 15px;
+        }
+
+        .resources_list .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resources_list .content span {
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+
+        .resources_list .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #FF5722;
+            text-align: right;
+        }
+
+        .resources_list .item span.separator {
+            margin: 0 5px;
+            color: #888;
+        }
+    </style>
+
+    <ul class="resources_list">
+        <li class="header">编程教程</li>
+        <li class="item">
+            <span class="badge" style="background:#FF8B26">1</span>
+            <img src="./images/python.png" width="100px" height="100px" />
+            <div class="content">
+                <span>Python 全栈开发教程</span>
+                <span>评分：5.0</span>
+                <span>1000 人学习</span>
+            </div>
+            <div class="price">￥99</div>
+        </li>
+        <li class="item">
+            <span class="badge" style="background:#FF8B26">2</span>
+            <img src="./images/web-front.png" width="100px" height="100px" />
+            <div class="content">
+                <span>前端工程师之路</span>
+                <span>评分：5.0</span>
+                <span>800 人学习</span>
+            </div>
+            <div class="price">￥99</div>
+        </li>
+        <li class="item">
+            <span class="badge" style="background:#FF8B26">3</span>
+            <img src="./images/java.jpg" width="100px" height="100px" />
+            <div class="content">
+                <span>java后端工程师之路</span>
+                <span>评分：5.0</span>
+                <span>800 人学习</span>
+            </div>
+            <div class="price">￥99</div>
+        </li>
+    </ul>
+
+    <ul class="resources_list">
+        <li class="header">开发工具</li>
+
+        <li class="item">
+            <span class="badge" style="background:#263cff">1</span>
+            <img src="./images/idea.png" width="100px" height="100px" />
+            <div class="content">
+                <span>JetBrains 最新版破解下载</span>
+                <span>评分：4.9</span>
+            </div>
+            <div class="price">免费</div>
+        </li>
+    </ul>
+
+    <!-- 旅游 end-->
+    <!--导入底部-->
+    <footer th:replace="~{/frontdesk/footer::footer}"></footer>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>详情</title>
+    <link rel="stylesheet" type="text/css" href="/frontdesk/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/frontdesk/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/frontdesk/css/route-detail.css">
+    <script src="/frontdesk/js/jquery-3.3.1.js"></script>
+    <script src="/frontdesk/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<!--引入头部-->
+<header th:replace="~{/frontdesk/header::header}"></header>
+<!-- 详情 start -->
+<div class="wrap">
+    <p class="pros_title" th:text="${product.productName}"></p>
+    <div class="prosum_box">
+        <div class="prosum_left">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="4000">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img th:src="${product.pImage}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="prosum_right">
+            <div class="info">
+                <p class="price"><span th:text="${product.price}"></span>起</p>
+                <p class="hotline">咨询电话:<span th:text="${product.hotline}">13812345678</span></p>
+                <div class="opera">
+                    <a th:href="@{/frontdesk/favorite/add(pid=${product.pid})}" th:if="!${favorite}">
+                        <button class="btn btn-danger"><i style="vertical-align:middle;margin-right:5px"
+                                                          class="glyphicon glyphicon-heart-empty"></i>点击收藏
+                        </button>
+                    </a>
+                    <a th:href="@{/frontdesk/favorite/del(pid=${product.pid})}" th:if="${favorite}">
+                        <button class="btn already"><i style="vertical-align:middle;margin-right:5px"
+                                                       class="glyphicon glyphicon-heart-empty"></i>取消收藏
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="discount">
+                <span>优惠活动：学生可免息分期</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="you_need_konw">
+        <span>资源详情</span>
+        <div class="notice" th:utext="${product.productDesc}"></div>
+    </div>
+
+    <div class="you_need_konw">
+        <span>资源分享获取须知</span>
+        <div class="notice">
+            <p>1. 网站已对发布的资源进行了合规审查。建议用户在下载或使用前阅读相关法律法规，并自行决定是否继续。</p>
+
+            <p>
+                2. 用户在下载、使用、分享本网站提供的任何资源时，需确保遵循适用的法律法规和相关许可条款。任何使用高风险性质的资源或技术（包括但不限于黑客技术、网络渗透、破解软件等），请确保具备相关的技能和合法使用条件，并自行承担一切法律责任。
+            </p>
+
+            <p>
+                3. 所有的收费均为维护网站。
+            </p>
+
+            <p>4. 根据相关法律法规，用户在使用本网站资源的过程中，可能需要承担相应的税费或其他费用，用户需自行了解相关规定并承担相应责任。</p>
+
+            <p>5.如有侵权请立刻联系网站管理员（或者客服），将对相关资源做下架处理。</p>
+
+        </div>
+    </div>
+</div>
+<!-- 详情 end -->
+
+<!-- 引入底部 -->
+<footer th:replace="~{/frontdesk/footer::footer}"></footer>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<footer class="footer" th:fragment="footer">
+    <style>
+        .footer {
+            width: 100%;
+            background: #f5f5f5;
+        }
+
+        .resource_section {
+            width: 1000px;
+            height: 190px;
+            margin: 0 auto;
+            padding: 10px 85px;
+            font-family: '微软雅黑';
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+
+        .resource_section .icon {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: url(../images/common_foot_2.png);
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+
+        .resource_section .box {
+            flex: 1;
+            padding-left: 30px;
+        }
+
+        .resource_section .box ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            border-right: 1px solid #eee;
+        }
+
+        .resource_section .box li {
+            width: 50%;
+            display: inline-block;
+            margin: 2px 0;
+        }
+
+        .resource_section .box:nth-child(2) .icon {
+            background-position: -40px 0px;
+        }
+
+        .resource_section .box:nth-child(3) .icon {
+            background-position: -120px 0px;
+        }
+
+        .company {
+            width: 100%;
+            height: 38px;
+            line-height: 38px;
+            background: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+
+    <div class="resource_section">
+        <div class="box">
+            <span class="icon"></span>编程语言
+            <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>JavaScript</li>
+                <li>C++</li>
+                <li>Go</li>
+                <li>Ruby</li>
+                <li>PHP</li>
+                <li>C#</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <span class="icon"></span>开发工具
+            <ul>
+                <li>Git</li>
+                <li>VS Code</li>
+                <li>Docker</li>
+                <li>Jupyter Notebook</li>
+                <li>IDEA</li>
+                <li>Postman</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <span class="icon"></span>学习资源
+            <ul>
+                <li>在线课程</li>
+                <li>开源项目</li>
+                <li>书籍推荐</li>
+                <li>社区讨论</li>
+                <li>博客文章</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="company">
+        <p>学习IT的资源与社区</p>
+    </div>
+</footer>

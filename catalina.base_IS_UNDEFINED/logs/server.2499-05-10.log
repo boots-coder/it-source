@@ -1,0 +1,25 @@
+20:34:08.996 [main] INFO  com.bootscoder.itsource.ItSourceApplication - Starting ItSourceApplication using Java 11.0.12 on LAPTOP-T02IJ0QU with PID 9360 (E:\java_work\it-source\it-source\target\classes started by Administrator in E:\java_work\it-source\it-source)
+20:34:08.998 [main] INFO  com.bootscoder.itsource.ItSourceApplication - No active profile set, falling back to 1 default profile: "default"
+20:34:10.092 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+20:34:10.100 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+20:34:10.101 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+20:34:10.101 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+20:34:10.179 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:34:10.179 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1149 ms
+20:34:11.565 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7858d31d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@782e6b40, org.springframework.security.web.context.SecurityContextPersistenceFilter@7b4b8199, org.springframework.security.web.header.HeaderWriterFilter@370225c7, org.springframework.web.filter.CorsFilter@3b65084e, org.springframework.security.web.authentication.logout.LogoutFilter@4813d0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@702096ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1de73d37, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71139e77, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32d0d7eb, org.springframework.security.web.session.SessionManagementFilter@156324b, org.springframework.security.web.access.ExceptionTranslationFilter@31006a75, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@37a3ec27]
+20:34:11.602 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+20:34:11.616 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+20:34:11.625 [main] INFO  com.bootscoder.itsource.ItSourceApplication - Started ItSourceApplication in 2.917 seconds (JVM running for 3.715)
+20:34:26.740 [http-nio-8888-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:34:26.741 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:34:26.742 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+20:34:27.122 [http-nio-8888-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:34:27.361 [http-nio-8888-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:34:33.017 [http-nio-8888-exec-5] WARN  org.apache.catalina.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [253] milliseconds.
+20:35:07.422 [http-nio-8888-exec-10] INFO  com.bootscoder.itsource.aop.LogAop - Log(url=/backstage/category/all, visitTime=Fri May 10 20:35:07 CST 2024, username=root, ip=0:0:0:0:0:0:0:1, executionTime=7, exceptionMessage=null)
+20:35:09.071 [http-nio-8888-exec-6] INFO  com.bootscoder.itsource.aop.LogAop - Log(url=/backstage/product/all, visitTime=Fri May 10 20:35:09 CST 2024, username=root, ip=0:0:0:0:0:0:0:1, executionTime=8, exceptionMessage=null)
+20:35:17.940 [http-nio-8888-exec-3] INFO  com.bootscoder.itsource.aop.LogAop - Log(url=/backstage/admin/all, visitTime=Fri May 10 20:35:17 CST 2024, username=root, ip=0:0:0:0:0:0:0:1, executionTime=5, exceptionMessage=null)
+20:35:18.501 [http-nio-8888-exec-8] INFO  com.bootscoder.itsource.aop.LogAop - Log(url=/backstage/role/all, visitTime=Fri May 10 20:35:18 CST 2024, username=root, ip=0:0:0:0:0:0:0:1, executionTime=7, exceptionMessage=null)
+20:35:19.442 [http-nio-8888-exec-6] INFO  com.bootscoder.itsource.aop.LogAop - Log(url=/backstage/permission/all, visitTime=Fri May 10 20:35:19 CST 2024, username=root, ip=0:0:0:0:0:0:0:1, executionTime=6, exceptionMessage=null)
+20:35:20.846 [http-nio-8888-exec-6] INFO  com.bootscoder.itsource.aop.LogAop - Log(url=/backstage/category/all, visitTime=Fri May 10 20:35:20 CST 2024, username=root, ip=0:0:0:0:0:0:0:1, executionTime=3, exceptionMessage=null)
+20:35:21.740 [http-nio-8888-exec-6] INFO  com.bootscoder.itsource.aop.LogAop - Log(url=/backstage/product/all, visitTime=Fri May 10 20:35:21 CST 2024, username=root, ip=0:0:0:0:0:0:0:1, executionTime=3, exceptionMessage=null)
