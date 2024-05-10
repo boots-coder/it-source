@@ -63,8 +63,8 @@ public class MemberService {
         String activeCode = UUID.randomUUID().toString();
         // 给用户的邮箱发送一封邮件，该邮件包含一个链接，链接中包含激活码
         String activeUrl = projectPath + "/frontdesk/member/active?activeCode=" + activeCode;
-        String text = "恭喜您注册成功！<a href = '" + activeUrl + "'>点击激活</a>完成账号认证";
-        mailUtils.sendMail(member.getEmail(), text, "旅游网激活邮件");
+        String text = "恭喜您注册成功！（有任何问题可直接回复此邮件）<a href = '" + activeUrl + "'>点击激活</a>完成账号认证";
+        mailUtils.sendMail(member.getEmail(), text, "it资源网激活邮件");
 
         // 保存激活码，激活时比对
         member.setActiveCode(activeCode);
