@@ -68,19 +68,10 @@ public class ProductController {
      */
     @RequestMapping("/upload")
     @ResponseBody
-    public WangEditorResult upload(HttpServletRequest request,
-                                   MultipartFile file) throws IOException {
+    public WangEditorResult upload(HttpServletRequest request, MultipartFile file) throws IOException {
         // 创建文件夹，存放上传文件
         // 1.设置上传文件夹的真实路径
-        String realPath = ResourceUtils.getURL("classpath:").getPath() + "/static/upload/img/product/small/";
-        // 定义io流的相对路径
-        String relativePath = "src/main/resources/static/upload/img/product/small";
-
-        // 创建路径对象并检查目录是否存在
-//        Path pathWrite = Paths.get(relativePath);
-//        if (!Files.exists(pathWrite)) {
-//            Files.createDirectories(pathWrite);
-//        }
+        String realPath = ResourceUtils.getURL("classpath:").getPath() + "/static/upload";
         // 2.判断该文件夹是否存在，如果不存在，新建文件夹
         File dir = new File(realPath);
         if (!dir.exists()){
@@ -89,24 +80,19 @@ public class ProductController {
         // 拿到上传文件名
         String filename = file.getOriginalFilename();
         filename = UUID.randomUUID()+filename;
-        // 生成io流需要的完整文件路径
-//        File fileWrite = new File(pathWrite.toString(), filename);
-
         // 创建空文件
         File newFile = new File(dir, filename);
-        // 创建io流需要的文件并写入到本地
-//        try (FileOutputStream fos = new FileOutputStream(fileWrite)) {
-//            fos.write(file.getBytes());
-//        }
         // 将上传的文件写到空文件中
         file.transferTo(newFile);
+
         // 构造返回结果
         WangEditorResult wangEditorResult = new WangEditorResult();
         wangEditorResult.setErrno(0);
-        String[] data = {"/upload/img/product/small/"+filename};
+        String[] data = {"/upload/"+filename};
         wangEditorResult.setData(data);
         return wangEditorResult;
     }
+
 
     @RequestMapping("/edit")
     public ModelAndView edit(Integer pid){

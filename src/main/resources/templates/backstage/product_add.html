@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>新增旅游产品</title>
+    <title>新增产品</title>
     <th:block th:replace="/backstage/common_resources::common_css"></th:block>
     <th:block th:replace="/backstage/common_resources::common_js"></th:block>
 </head>
@@ -13,13 +13,13 @@
         <!-- 内容头部 -->
         <section class="content-header">
             <h1>
-                旅游产品管理
-                <small>新增旅游产品</small>
+                产品管理
+                <small>新增产品</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="@{/backstage/index}"><i class="fa fa-dashboard"></i> 首页</a></li>
-                <li><a href="@{/backstage/product/all}">旅游产品管理</a></li>
-                <li class="active">新增旅游产品</li>
+                <li><a href="@{/backstage/product/all}">产品管理</a></li>
+                <li class="active">新增产品</li>
             </ol>
         </section>
         <!-- 内容头部 /-->
@@ -71,9 +71,9 @@
                     <div class="col-md-4 data">
                         <input type="number" class="form-control" placeholder="价格" name="price">
                     </div>
-                    <div class="col-md-2 title">热线电话</div>
+                    <div class="col-md-2 title">url</div>
                     <div class="col-md-4 data">
-                        <input type="text" class="form-control" placeholder="热线电话" name="hotline" value="">
+                        <input type="text" class="form-control" placeholder="咨询QQ" name="hotline" value="">
                     </div>
                     <div class="col-md-2 title">状态</div>
                     <div class="col-md-4 data">

@@ -1,12 +1,12 @@
 # 端口
 server:
-  port: 80
+  port: 81
 
 # 数据源
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://165.154.36.78:3306/it-source?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/it-source?serverTimezone=UTC
 #    url: jdbc:mysql://192.168.0.155:3306/travel?serverTimezone=UTC
     username: root
     password: root
@@ -47,3 +47,4 @@ mail:
 # 项目路径
 project:
   path: http://165.154.36.78
+
