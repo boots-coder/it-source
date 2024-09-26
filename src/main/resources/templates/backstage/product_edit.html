@@ -54,7 +54,7 @@
                     <img height="100" th:src="${product.pImage}" id="pImage">
                 </div>
                 <form th:action="@{/backstage/product/update}" method="post">
-                    <input type="hidden" name="pImage" id="hiddenPImage">
+                    <input type="hidden" name="pImage" id="hiddenPImage" th:value="${product.PImage}">
                     <input type="hidden" name="pid" th:value="${product.pid}">
                     <div class="col-md-2 title">产品名称</div>
                     <div class="col-md-4 data">

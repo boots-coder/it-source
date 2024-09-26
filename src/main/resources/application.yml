@@ -6,10 +6,15 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/it-source?serverTimezone=UTC
+    url: jdbc:mysql://hello1234.mysql.database.azure.com:3306/it-source?serverTimezone=UTC
 #    url: jdbc:mysql://192.168.0.155:3306/travel?serverTimezone=UTC
-    username: root
-    password: root
+    username: mysql
+    password: root1234..
+  web:
+    resources:
+      static-locations:
+        - file:./uploads/     # 添加的外部目录
+        - classpath:/static/  # 默认静态资源目录
   # 上传文件
   servlet:
     multipart:
@@ -46,5 +51,7 @@ mail:
 
 # 项目路径
 project:
-  path: http://165.154.36.78
-
+  path: http://51.13.34.188
+file:
+  upload:
+    dir: uploads
