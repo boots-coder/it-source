@@ -26,7 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         // 权限拦截配置
         http.authorizeRequests()
-                .antMatchers("/backstage/product/upload").permitAll()
+//                .antMatchers("/backstage/product/upload").permitAll() 测试和修改图片上传功能的时候弄的
                 .antMatchers("/backstage/admin/login").permitAll() // 登录不需要认证
                 .antMatchers("/backstage/admin_fail").permitAll()// 登录失败不需要认证
                 .antMatchers("/backstage/admin_login").permitAll()// 登录页不需要认证

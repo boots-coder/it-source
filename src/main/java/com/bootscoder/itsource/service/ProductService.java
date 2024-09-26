@@ -22,6 +22,7 @@ public class ProductService {
 
     public void add(Product product){
         productMapper.insert(product);
+        //todo finding that the edit and the detail part photo uploading function failed
     }
 
     public Product findOne(int pid){

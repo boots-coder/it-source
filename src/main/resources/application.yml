@@ -10,6 +10,7 @@ spring:
 #    url: jdbc:mysql://192.168.0.155:3306/travel?serverTimezone=UTC
     username: mysql
     password: root1234..
+    #todo there is something wrong where the password in public
   web:
     resources:
       static-locations:
